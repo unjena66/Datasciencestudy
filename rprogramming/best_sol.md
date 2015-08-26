@@ -58,10 +58,11 @@ state변수에 대한 validation도 진행. 미국에 몇개주가 있는지 모
     bestHosp <- stateData[stateData[,outcome.real]==bestOutVal,]$Hospital.Name
 
 사실은 끝이 아니다. hospital name으로 여러개가 반환된 경우 처리르 해줘야 하는 것. sort함수는 알파벳순서에 따라 자동으로 배열해주는 함수. 여러개가 아닌 경우에는 그냥 반환해주면 됨.
+
     if(length(bestHosp)>1){
         bestHosp <- sort(bestHosp)[1]
     }
         
         bestHosp
-}
+    }
 
