@@ -1,12 +1,15 @@
     
     best <- function(state, outcome) {
-        ##Read outcome data Check that state and outcome are valid Return 
-	##hospital name in that state with lowest 30-day death rate
+
+        ## Read outcome data 
+	## Check that state and outcome are valid 
+	## Return hospital name in that state with lowest 30-day death rate
     }
 
 위와 같이 함수의 구조가 제시됨. 하나씩 살펴보자면, 처음에 파일로부터 데이터를 불러옴
 
     best <- function(state, outcome){
+
 	## colClasses로 character를 지정하게 되는데 이는 read.csv로불러오면 각 column이 factor로 지정되기 때문. 
 	##모든 data type은 character로 변환될 수 있기 때문에 character로 불러오는 것이 가장 안전.
     data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
@@ -20,7 +23,8 @@
         }else if(outcome == "pneumonia"){
                 outcome.real <- "Hospital.30.Day.Death..Mortality..Rates.from.Pneumonia"
         }else{
-	## 위 세개 중 하나가 아니면 outcome변수로는 의미가 없다.
+
+	    ## 위 세개 중 하나가 아니면 outcome변수로는 의미가 없다.
                 stop("invalid outcome")
         }
 "`
