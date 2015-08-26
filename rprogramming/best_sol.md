@@ -1,19 +1,15 @@
     
     best <- function(state, outcome) {
- Read outcome data
- Check that state and outcome are valid
- Return hospital name in that state with lowest 30-day death
- rate
-}
-\`
+        Read outcome data Check that state and outcome are valid Return hospital name in that state with lowest 30-day death rate
+    }
 
 위와 같이 함수의 구조가 제시됨. 하나씩 살펴보자면,
 처음에
-\`
- best <- function(state, outcome){
- 파일로부터 데이터를 불러옴.colClasses로 character를 지정하게 되는데 이는 read.csv로불러오면 각 column이 factor로 지정되기 때문. 모든 data type은 character로 변환될 수 있기 때문에 character로 불러오는 것이 가장 안전.
-        data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
-\`
+
+    best <- function(state, outcome){
+    파일로부터 데이터를 불러옴.colClasses로 character를 지정하게 되는데 이는 read.csv로불러오면 각 column이 factor로 지정되기 때문. 모든 data type은 character로 변환될 수 있기 때문에 character로 불러오는 것이 가장 안전.
+     data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+
       
 각 변수에 대한 밸리데이션 진행. outcome부터 여기서 하는데, 편의상 validation과 함께 outcome에 대한 value transformation(?)도 같이 진행함.
 "`
