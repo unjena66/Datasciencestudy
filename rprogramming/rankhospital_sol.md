@@ -1,6 +1,7 @@
 이 함수는 각 state, outcome, rank(num)을 지정해주면 각 주별로 해당 outcome에서 해당 rank의 좋은 결과를 보이는 병원 이름을 뽑아내라는 것. 간단하게 전략을 소개하자면, 전체 데이터를 각 주별로 나눈후, 각 주를 outcome이 좋은 순서대로 나열한 후, 각 주에서 rank에 맞는 순서를 뽑아서 hospital.name을 읽어오자는 것
 
 함수는 다음과 같다.
+
     rankhospital <- function(state, outcome, num = "best"){
         ## Read data
         data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
