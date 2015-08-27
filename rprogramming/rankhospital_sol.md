@@ -60,4 +60,4 @@ num 값을 best나 worst로 넣을 수 있도록 하였으므로 다음과 같�
         rankHosp <- ordered$Hospital.Name[[num]]
 
         rankHosp
-}
+    }
